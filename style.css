@@ -1,0 +1,86 @@
+
+* /* Theme Variables */
+:root {
+  --bg: #fdf6e3;
+  --fg: #333;
+  --accent: #ff4081;
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --fg: #e0e0e0;
+  --accent: #ff4081;
+}
+
+/* Global Styles */
+body {
+  background: var(--bg);
+  color: var(--fg);
+  transition: background 0.3s, color 0.3s;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem;
+  background: var(--bg);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--fg);
+}
+
+/* Timer Display */
+.timer {
+  font-size: 4rem;
+  margin: 1rem 0;
+}
+
+/* Start Button */
+.start-btn, .reset-btn, .start-lap, .stop-lap, .reset-lap {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.start-btn:hover, .reset-btn:hover, .start-lap:hover, .stop-lap:hover, .reset-lap:hover {
+  background: #ff66b3;
+}
+
+/* Lap Timer */
+.lap-timer-section {
+  margin-top: 3rem;
+}
+
+.lap-display {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
