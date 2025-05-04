@@ -1,16 +1,23 @@
-
-* /* Theme Variables */
+/* Theme Variables */
 :root {
-  --bg: #fdf6e3;
-  --fg: #333;
-  --accent: #ff4081;
+  --bg: #fdf6e3;   /* Light theme background */
+  --fg: #333;       /* Light theme text color */
+  --accent: #ff4081; /* Default accent color */
 }
 
 [data-theme="dark"] {
-  --bg: #121212;
-  --fg: #e0e0e0;
-  --accent: #ff4081;
+  --bg: #121212;    /* Dark theme background */
+  --fg: #e0e0e0;    /* Dark theme text color */
+  --accent: #ff4081; /* Dark theme accent color */
 }
+
+[data-theme="light"] {
+  --bg: #fdf6e3;    /* Light theme background */
+  --fg: #333;       /* Light theme text color */
+  --accent: #4CAF50; /* Green accent for light theme */
+}
+
+
 
 /* Global Styles */
 body {
@@ -41,6 +48,13 @@ body {
   cursor: pointer;
   color: var(--fg);
 }
+#clock  {
+    font-size: 8rem;          /* BIG and sexy, adjust as needed */
+    font-weight: bold;
+    color: var(--fg);         /* Uses theme foreground color */
+    text-align: center;
+    margin: 1rem 0;
+  }
 
 /* Timer Display */
 .timer {
@@ -49,21 +63,50 @@ body {
 }
 
 /* Start Button */
+/* Button Styles */
 .start-btn, .reset-btn, .start-lap, .stop-lap, .reset-lap {
   width: 100%;
   padding: 1rem;
   font-size: 1.2rem;
   background: var(--accent);
-  color: #fff;
+  color: #fff; 
   border: none;
   border-radius: 8px;
   cursor: pointer;
   margin-bottom: 0.5rem;
+  transition: background 0.3s; 
 }
 
 .start-btn:hover, .reset-btn:hover, .start-lap:hover, .stop-lap:hover, .reset-lap:hover {
   background: #ff66b3;
 }
+[data-theme="light"] .start-btn, 
+[data-theme="light"] .reset-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+[data-theme="dark"] .start-btn, 
+[data-theme="dark"] .reset-btn {
+  background: #ff4081;
+  color: white;
+}
+.start-btn, .reset-btn {
+  border: 2px solid #333; /* Border to make it more noticeable */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+[data-theme="light"] .start-btn, 
+[data-theme="light"] .reset-btn {
+  border-color: #4CAF50; /* Green border in light theme */
+}
+
+[data-theme="dark"] .start-btn, 
+[data-theme="dark"] .reset-btn {
+  border-color: #ff4081; /* Pink border in dark theme */
+}
+
+
 
 /* Lap Timer */
 .lap-timer-section {
@@ -80,7 +123,15 @@ ul {
   padding: 0;
 }
 
-ul li {
+ul li 
+{
   font-size: 1rem;
   margin-top: 0.5rem;
+}
+#signature {
+  font-family: 'Arial','sans-serif';
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 4rem;
+  color: var(--fg);
 }

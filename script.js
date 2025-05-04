@@ -4,7 +4,7 @@ themeBtn.addEventListener('click', () => {
   const newTheme = document.documentElement.getAttribute('data-theme') === 'dark'
     ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', newTheme);
-  themeBtn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+  themeBtn.textContent = newTheme === 'dark' ? 'Dark' : 'Light';
 });
 
 // --- Digital Clock ---
